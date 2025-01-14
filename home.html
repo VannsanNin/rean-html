@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: 2px solid red;
+      }
+      .nav ul {
+        display: flex;
+        list-style: none;
+        border: 2px solid red;
+      }
+      .nav ul li {
+        margin-right: 50px;
+      }
+      .nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      .nav ul li a:hover {
+        color: red;
+      }
+      .logo {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .slide {
+        background-color: #333;
+        color: white;
+        height: 200px;
+        border: 2px solid red;
+        margin: 20px 0;
+      }
+      .about {
+        background-color: #333;
+        color: white;
+        height: 200px;
+        border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .about div {
+        margin: 20px;
+        width: 50%;
+        height: 50px;
+        border: 4px solid white;
+      }
+      .img {
+        background-color: #333;
+        color: white;
+        border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 20px 0;
+      }
+
+      .img div {
+        margin: 20px;
+        width: 25%;
+        height: 50px;
+        border: 4px solid white;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <a class="logo" href="#">LOGO</a>
+        <ul>
+          <li><a href="https://codeacademykh.vercel.app/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="slide">
+      <p>Slide bar</p>
+    </section>
+    <section class="about">
+      <div>About info</div>
+      <div>Vision & Mission</div>
+    </section>
+    <section class="img">
+      <div>Image1</div>
+      <div>Image2</div>
+      <div>Image3</div>
+      <div>Image4</div>
+    </section>
+    <section class="footer">
+      <div>Footer</div>
+    </section>
+  </body>
+</html>

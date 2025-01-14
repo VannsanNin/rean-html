@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Table</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+      }
+      th,
+      td {
+        border: 1px solid gray;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      img {
+        width: 50px;
+        height: auto;
+      }
+      .rating-star {
+        color: #ffd700;
+      }
+      .add-to-quote {
+        background-color: #4caf50;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+      }
+      .tham {
+        width: 100px;
+      }
+      .thead {
+        background-color: darkcyan;
+      }
+      .con {
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 10px;
+      }
+      .con1 {
+        margin: 0 auto;
+        width: 60%;
+      }
+      .ch {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <table>
+        <thead>
+          <tr>
+            <th class="tham thead">Thumbnail</th>
+            <th class="thead">Product Name</th>
+            <th class="thead">SKU</th>
+            <th class="thead">Rating</th>
+            <th class="thead">Price</th>
+            <th class="thead">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="./photo/photo_2024-11-21_11-29-20.jpg"
+                alt="Brass Perfection"
+              />
+            </td>
+            <td>Brass Perfection</td>
+            <td>74849</td>
+            <td>★★★★☆</td>
+            <td>$150.00</td>
+            <td><button class="add-to-quote">Add To Quote</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./photo/photo_2024-11-21_11-29-20.jpg"
+                alt="Elegant Blue Dress"
+              />
+            </td>
+            <td>Elegant Blue Dress</td>
+            <td>37439</td>
+            <td>★★★★★</td>
+            <td>$90.00</td>
+            <td><button class="add-to-quote">Add To Quote</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./photo/photo_2024-11-21_11-29-20.jpg"
+                alt="Digital Cloth"
+              />
+            </td>
+            <td>Digital Cloth</td>
+            <td>29203</td>
+            <td>★★★★☆</td>
+            <td>$246.00</td>
+            <td><button class="add-to-quote">Add To Quote</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./photo/photo_2024-11-21_11-29-20.jpg"
+                alt="Girl Sweetshirt"
+              />
+            </td>
+            <td>Girl Sweetshirt</td>
+            <td>26389</td>
+            <td>★★★☆☆</td>
+            <td>$230.00</td>
+            <td><button class="add-to-quote">Add To Quote</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./photo/photo_2024-11-21_11-29-20.jpg"
+                alt="Soft Jeans Pant"
+              />
+            </td>
+            <td>Soft Jeans Pant</td>
+            <td>62537</td>
+            <td>★★★★☆</td>
+            <td>$150.00</td>
+            <td><button class="add-to-quote">Add To Quote</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- table2 -->
+    <div class="con1">
+      <table>
+        <thead>
+          <tr>
+            <th class="tham thead">ID</th>
+            <th class="thead">Tranding</th>
+            <th class="thead">Status</th>
+            <th class="thead">Create At</th>
+            <th class="thead">Edit</th>
+            <th class="thead">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" /></td>
+            <td>21:37:05</td>
+            <td><button class="add-to-quote">Edit</button></td>
+            <td><button class="add-to-quote ch">Delete</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" /></td>
+            <td>21:37:05</td>
+            <td><button class="add-to-quote">Edit</button></td>
+            <td><button class="add-to-quote ch">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
