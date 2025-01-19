@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card to Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .form-container {
+        margin-bottom: 20px;
+      }
+      input {
+        margin: 5px 0;
+        padding: 8px;
+        width: 200px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h3>Enter Details</h3>
+      <form id="cardForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" required /><br />
+
+        <label for="dob">Date of Birth:</label><br />
+        <input type="date" id="dob" required /><br />
+
+        <label for="idNumber">ID Number:</label><br />
+        <input type="text" id="idNumber" /><br />
+
+        <button type="submit">Add to Table</button>
+      </form>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>ID Number</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Rows will be added here dynamically -->
+      </tbody>
+    </table>
+
+    <script>
+      const form = document.getElementById("cardForm");
+      const tableBody = document.getElementById("tableBody");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById("name").value;
+        const dob = document.getElementById("dob").value;
+        const idNumber = document.getElementById("idNumber").value;
+
+        // Create a new row
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+        <td>${name}</td>
+        <td>${dob}</td>
+        <td>${idNumber}</td>
+      `;
+
+        // Append the row to the table
+        tableBody.appendChild(newRow);
+
+        // Clear the form
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

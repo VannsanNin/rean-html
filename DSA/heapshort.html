@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heap Sort Visualization</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: gray;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .visualizations {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 20px;
+      }
+
+      .tree-view,
+      .array-view {
+        flex: 1;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        color: #555;
+      }
+
+      .tree-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 20px;
+      }
+
+      .tree-level {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .node {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .array-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .array-element {
+        width: 50px;
+        height: 50px;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .highlighted {
+        background-color: #4a90e2;
+        color: white;
+      }
+
+      .swapping {
+        background-color: #e74c3c;
+        color: white;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4a90e2;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #357abd;
+      }
+
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      #explanation {
+        text-align: center;
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        color: #666;
+      }
+
+      #phase {
+        text-align: center;
+        margin: 10px 0;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Heap Sort Visualization</h1>
+      <div id="phase">Initial Array</div>
+      <div class="visualizations">
+        <div class="tree-view">
+          <h2>Binary Heap Tree</h2>
+          <div class="tree-container" id="treeContainer"></div>
+        </div>
+        <div class="array-view">
+          <h2>Array Representation</h2>
+          <div class="array-container" id="arrayContainer"></div>
+        </div>
+      </div>
+      <div id="explanation"></div>
+      <div class="controls">
+        <button id="resetBtn">Reset</button>
+        <button id="prevBtn">Previous</button>
+        <button id="playPauseBtn">Play</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+
+    <script>
+      class HeapSortVisualizer {
+        constructor(array) {
+          this.originalArray = [...array];
+          this.array = [...array];
+          this.steps = [];
+          this.currentStep = 0;
+          this.isPlaying = false;
+          this.playInterval = null;
+
+          this.generateSteps();
+          this.setupControls();
+          this.render();
+        }
+
+        generateSteps() {
+          this.steps = [];
+          this.array = [...this.originalArray];
+
+          // Add initial state
+          this.steps.push({
+            array: [...this.array],
+            phase: "Initial Array",
+            highlighted: [],
+            swapping: [],
+          });
+
+          // Build max heap
+          const n = this.array.length;
+          for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+            this.heapify(n, i);
+          }
+
+          // Extract elements from heap
+          for (let i = n - 1; i > 0; i--) {
+            // Move root to end
+            [this.array[0], this.array[i]] = [this.array[i], this.array[0]];
+            this.steps.push({
+              array: [...this.array],
+              phase: "Extracting Max",
+              highlighted: [0, i],
+              swapping: [0, i],
+            });
+
+            this.heapify(i, 0);
+          }
+
+          // Add final state
+          this.steps.push({
+            array: [...this.array],
+            phase: "Sorted Array",
+            highlighted: [],
+            swapping: [],
+          });
+        }
+
+        heapify(n, i) {
+          let largest = i;
+          const left = 2 * i + 1;
+          const right = 2 * i + 2;
+
+          this.steps.push({
+            array: [...this.array],
+            phase: "Heapifying",
+            highlighted: [
+              i,
+              left < n ? left : null,
+              right < n ? right : null,
+            ].filter((x) => x !== null),
+            swapping: [],
+          });
+
+          if (left < n && this.array[left] > this.array[largest]) {
+            largest = left;
+          }
+
+          if (right < n && this.array[right] > this.array[largest]) {
+            largest = right;
+          }
+
+          if (largest !== i) {
+            [this.array[i], this.array[largest]] = [
+              this.array[largest],
+              this.array[i],
+            ];
+            this.steps.push({
+              array: [...this.array],
+              phase: "Heapifying - Swap",
+              highlighted: [i, largest],
+              swapping: [i, largest],
+            });
+
+            this.heapify(n, largest);
+          }
+        }
+
+        renderTree() {
+          const treeContainer = document.getElementById("treeContainer");
+          treeContainer.innerHTML = "";
+
+          const currentStep = this.steps[this.currentStep];
+          const array = currentStep.array;
+
+          for (let level = 0; level < 3; level++) {
+            const levelDiv = document.createElement("div");
+            levelDiv.className = "tree-level";
+
+            const startIdx = Math.pow(2, level) - 1;
+            const endIdx = Math.min(Math.pow(2, level + 1) - 1, array.length);
+
+            if (startIdx >= array.length) break;
+
+            for (let i = startIdx; i < endIdx; i++) {
+              const node = document.createElement("div");
+              node.className = "node";
+              if (currentStep.highlighted.includes(i)) {
+                node.classList.add("highlighted");
+              }
+              if (currentStep.swapping.includes(i)) {
+                node.classList.add("swapping");
+              }
+              node.textContent = array[i];
+              levelDiv.appendChild(node);
+            }
+
+            treeContainer.appendChild(levelDiv);
+          }
+        }
+
+        renderArray() {
+          const arrayContainer = document.getElementById("arrayContainer");
+          arrayContainer.innerHTML = "";
+
+          const currentStep = this.steps[this.currentStep];
+          const array = currentStep.array;
+
+          array.forEach((value, index) => {
+            const element = document.createElement("div");
+            element.className = "array-element";
+            if (currentStep.highlighted.includes(index)) {
+              element.classList.add("highlighted");
+            }
+            if (currentStep.swapping.includes(index)) {
+              element.classList.add("swapping");
+            }
+            element.textContent = value;
+            arrayContainer.appendChild(element);
+          });
+        }
+
+        updateExplanation() {
+          const step = this.steps[this.currentStep];
+          const explanationEl = document.getElementById("explanation");
+          const phaseEl = document.getElementById("phase");
+
+          phaseEl.textContent = `${step.phase} (Step ${
+            this.currentStep + 1
+          } of ${this.steps.length})`;
+
+          let explanation = "";
+          if (step.phase === "Heapifying") {
+            const [parent, left, right] = step.highlighted;
+            explanation = `Comparing parent index ${parent} with its children`;
+          } else if (step.phase === "Heapifying - Swap") {
+            const [from, to] = step.swapping;
+            explanation = `Swapping elements at indices ${from} and ${to}`;
+          } else if (step.phase === "Extracting Max") {
+            explanation = "Moving largest element to the end";
+          }
+
+          explanationEl.textContent = explanation;
+        }
+
+        render() {
+          this.renderTree();
+          this.renderArray();
+          this.updateExplanation();
+
+          // Update button states
+          document.getElementById("prevBtn").disabled = this.currentStep === 0;
+          document.getElementById("nextBtn").disabled =
+            this.currentStep === this.steps.length - 1;
+        }
+
+        setupControls() {
+          document
+            .getElementById("resetBtn")
+            .addEventListener("click", () => this.reset());
+          document
+            .getElementById("prevBtn")
+            .addEventListener("click", () => this.prev());
+          document
+            .getElementById("nextBtn")
+            .addEventListener("click", () => this.next());
+          document
+            .getElementById("playPauseBtn")
+            .addEventListener("click", () => this.togglePlay());
+        }
+
+        reset() {
+          this.currentStep = 0;
+          this.stopPlay();
+          this.render();
+        }
+
+        prev() {
+          if (this.currentStep > 0) {
+            this.currentStep--;
+            this.stopPlay();
+            this.render();
+          }
+        }
+
+        next() {
+          if (this.currentStep < this.steps.length - 1) {
+            this.currentStep++;
+            this.render();
+          } else {
+            this.stopPlay();
+          }
+        }
+
+        togglePlay() {
+          if (this.isPlaying) {
+            this.stopPlay();
+          } else {
+            this.startPlay();
+          }
+        }
+
+        startPlay() {
+          if (!this.isPlaying && this.currentStep < this.steps.length - 1) {
+            this.isPlaying = true;
+            document.getElementById("playPauseBtn").textContent = "Pause";
+            this.playInterval = setInterval(() => {
+              this.next();
+              if (this.currentStep === this.steps.length - 1) {
+                this.stopPlay();
+              }
+            }, 1000);
+          }
+        }
+
+        stopPlay() {
+          if (this.isPlaying) {
+            this.isPlaying = false;
+            document.getElementById("playPauseBtn").textContent = "Play";
+            clearInterval(this.playInterval);
+          }
+        }
+      }
+
+      // Initialize the visualizer with the array
+      const visualizer = new HeapSortVisualizer([2, 8, 5, 3, 9, 1]);
+    </script>
+  </body>
+</html>
