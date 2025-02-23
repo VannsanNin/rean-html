@@ -1,0 +1,52 @@
+.border {
+  border: solid 1px gray;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-left: 15px;
+}
+.navbar-brand img {
+  height: 40px;
+}
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+}
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.right-panel {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  height: calc(100vh - 76px);
+  position: sticky;
+  top: 76px;
+}
+.product-card {
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.product-card:hover {
+  background-color: #fdf2f7;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-right {
+  width: 250px;
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  .right-panel {
+    height: auto;
+    position: static;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    border-left: none;
+  }
+}
