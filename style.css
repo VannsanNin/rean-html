@@ -2,3 +2,10 @@ table {
   margin: 10px;
   border-collapse: collapse;
 }
+ol {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 5px;
+}

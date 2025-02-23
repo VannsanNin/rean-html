@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirt Order Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Kantumruy Pro", sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 32px;
+
+        }
+
+        .h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .emailphone {
+            display: flex;
+            gap: 20px;
+        }
+
+        .email,
+        .phone {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        .sizeColor {
+            display: flex;
+            gap: 20px;
+        }
+
+        .size,
+        .color {
+            flex: 1;
+        }
+
+        select {
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+
+            .emailphone,
+            .sizeColor {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Shirt Order Form</h1>
+        <p>Please fill out this form to order your shirt.</p>
+
+        <form class="form">
+            <div>
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" placeholder="Enter your full name">
+            </div>
+
+            <div class="emailphone">
+                <div class="email">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="phone">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone">
+                </div>
+            </div>
+
+            <div>
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Enter your shipping address">
+            </div>
+
+            <div class="sizeColor">
+                <div class="size">
+                    <label for="size">Shirt Size</label>
+                    <select id="size">
+                        <option value="">Select a size</option>
+                        <option value="s">Small</option>
+                        <option value="m">Medium</option>
+                        <option value="l">Large</option>
+                        <option value="xl">X-Large</option>
+                    </select>
+                </div>
+                <div class="color">
+                    <label for="color">Shirt Color</label>
+                    <select id="color">
+                        <option value="">Select a color</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="orange">Orange</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" placeholder="Enter the number of shirts" min="1">
+            </div>
+
+            <div>
+                <label for="instructions">Special Instructions</label>
+                <input type="text" id="instructions" placeholder="Enter any special instructions">
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Mono:wght@100..900&display=swap");
+* {
+  font-family: "JetBrains Mono", serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  background-color: #b8cce3;
+  padding: 20px 30px;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+.header a {
+  padding: 10px;
+}
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Mono:wght@100..900&display=swap");
+
+.nav {
+  margin-left: -1.9rem;
+
+  /* position: fixed; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 10px;
+  background-color: #919aa5;
+  width: 100%;
+  /* top:  0 ; 
+  left: 0 ;  */
+  z-index: 999;
+}
+.containeur {
+  display: flex;
+  position: fixed;
+  margin-left: 3rem;
+  text-align: center;
+  width: 100%;
+  padding: 25px;
+  background-color: #134074;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  text-align: right;
+  text-align: left;
+  font-size: 25px;
+  color: aliceblue;
+  margin-left: 10px;
+}
+
+a {
+  margin: 30px;
+  font-size: 20px;
+  color: #eeefed;
+  padding: 15px;
+  margin-top: 40px;
+  text-decoration: none;
+  position: sticky;
+}
+
+.nav a {
+  padding: 10px;
+  transition: background-color 0.3s ease-out;
+}
+.nav a:hover {
+  background-color: #134074;
+  border-radius: 10px;
+}
+.containner {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.containner .text {
+  margin-left: 3rem;
+  width: 50%;
+}
+
+.containner .text h1 {
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.containner .text h1 span {
+  font-weight: 400;
+}
+
+.containner .text p {
+  width: 85%;
+  font-size: 17px;
+  margin: 25px 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.containner .text button {
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #e8505b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.containner .text button:hover {
+  background: #bb444c;
+}
+
+.containner .photo {
+  width: 50%;
+}
+
+.containner .photo img {
+  width: 520px;
+  border-radius: 10px;
+}
+h6 {
+  font-size: 25px;
+  margin-top: 8rem;
+  margin-left: -65.8rem;
+  padding: 15px;
+  background-color: #e8505b;
+  border-radius: 5px;
+  color: #eeefed;
+}
+h6:hover {
+  padding: 20px;
+  background-color: #e9ecf0;
+  color: #e8505b;
+  transition: 0.5s;
+}
+@font-face {
+  font-family: "FAMILY_NAME";
+  font-style: NORMAL_OR_ITALIC;
+  font-weight: NUMERIC_WEIGHT_VALUE;
+  font-display: swap;
+  src: url(FONT_FILE_NAME.woff2) format("woff2");
+}
+.containerrr > div {
+  gap: 35px;
+  margin-left: 1rem;
+  display: flex;
+  margin-top: 5rem;
+  width: auto;
+  margin-bottom: 4rem;
+}
+.containe {
+  border: 1px solid lightcoral;
+}
+.col-4.row {
+  width: 140px;
+  border: 1px solid rgb(199, 222, 199);
+}
+.tett {
+  padding: 110px;
+  height: 290px;
+  background-color: #c0d0e2;
+  border-radius: 7px;
+  border: 1px solid rgb(41, 38, 38);
+}
+.pc {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  background-color: #eb2f51;
+  border-radius: 7px;
+  color: #e9ecf0;
+}
+.pc:hover {
+  padding: 15px;
+  background-color: #e9ecf0;
+  color: #e30d1b;
+  transition: 1s;
+}
+
+.icon {
+  margin-left: 4.2rem;
+  margin-top: -5rem;
+}
+.bi-star-fill {
+  font-size: 20px;
+  margin-top: -90rem;
+  color: orange;
+}
+.realimg {
+  margin-top: 2rem;
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+}
+
+button {
+  margin-left: 3rem;
+  font-size: 15px;
+  margin-top: 1rem;
+  padding: 15px;
+  width: 150px;
+  background-color: rgb(237, 64, 107);
+  border-radius: 5px;
+  color: #eeefed;
+}
+.bt-n:hover {
+  padding: 20px;
+  background-color: hwb(0 98% 2%);
+  color: #f20a1a;
+  transition: 1s;
+}

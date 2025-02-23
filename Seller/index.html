@@ -1,455 +1,720 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Shop Menu</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .navbar-brand img {
-      height: 40px;
-      width: auto;
-    }
-  </style>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./download.svg" alt="Coffee Shop Logo" width="150" height="50">
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="addressDropdown" data-bs-toggle="dropdown">
-              Select your address
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Downtown - 123 Main St</a></li>
-              <li><a class="dropdown-item" href="#">Uptown - 456 Park Ave</a></li>
-              <li><a class="dropdown-item" href="#">Add New Address</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="d-flex align-items-center">
-          <a href="#" class="btn btn-outline-primary me-2">Login</a>
-          <a href="#" class="btn btn-primary me-3">Sign Up</a>
-
-          <select class="form-select" style="width: auto;">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container-fluid">
-    <div class="row">
-      <main class="col-lg-9 p-4">
-        <div class="row g-4">
-          <!-- Espresso Card -->
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Espresso</h2>
-                    <p class="mb-1">from $3.25</p>
-                    <p class="text-muted small">Rich, full-bodied shot with a caramel-colored crema
-                    </p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Espresso" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cappuccino Card -->
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Cappuccino</h2>
-                    <p class="mb-1">from $4.50</p>
-                    <p class="text-muted small">Equal parts espresso, steamed milk, and silky foam
-                    </p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Cappuccino" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Caffè Latte</h2>
-                    <p class="mb-1">from $4.75</p>
-                    <p class="text-muted small">Espresso with steamed milk and light foam</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Latte" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Caffè Latte</h2>
-                    <p class="mb-1">from $4.75</p>
-                    <p class="text-muted small">Espresso with steamed milk and light foam</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Latte" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Caffè Latte</h2>
-                    <p class="mb-1">from $4.75</p>
-                    <p class="text-muted small">Espresso with steamed milk and light foam</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Latte" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Caffè Latte</h2>
-                    <p class="mb-1">from $4.75</p>
-                    <p class="text-muted small">Espresso with steamed milk and light foam</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Latte" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Caffè Latte</h2>
-                    <p class="mb-1">from $4.75</p>
-                    <p class="text-muted small">Espresso with steamed milk and light foam</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Latte" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Caffè Latte</h2>
-                    <p class="mb-1">from $4.75</p>
-                    <p class="text-muted small">Espresso with steamed milk and light foam</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Latte" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Caffè Latte</h2>
-                    <p class="mb-1">from $4.75</p>
-                    <p class="text-muted small">Espresso with steamed milk and light foam</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Latte" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mocha Card -->
-          <div class="col-md-6">
-            <div class="card product-card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-8">
-                    <h2 class="fs-4">Mocha</h2>
-                    <p class="mb-1">from $5.00</p>
-                    <p class="text-muted small">Espresso with chocolate and steamed milk</p>
-                  </div>
-                  <div class="col-4">
-                    <img class="image rounded" src="./photo/24117.png" alt="Mocha" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <aside class="col-lg-3 px-0">
-        <div class="right-panel">
-          <h3>Your Order</h3>
-          <div class="mb-4">
-            <p class="text-muted">Select items to add them to your cart</p>
-            <div id="cart-items">
-              <!-- Cart items will appear here -->
-            </div>
-          </div>
-          <img class="img-right" src="./photo/illu_cart_empty.svg" alt="">
-        </div>
-      </aside>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
-<!-- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Menu</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .search1 {
+        width: 200px;
+        margin-left: 20px;
+      }
+    </style>
   </head>
-  <body class="container">
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom"
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="./download.svg" alt="Logo" />
+          <img
+            src="./download.svg"
+            alt="Coffee Shop Logo"
+            width="150"
+            height="50"
+          />
         </a>
 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
                 id="addressDropdown"
-                role="button"
                 data-bs-toggle="dropdown"
-                aria-expanded="false"
               >
                 Select your address
               </a>
-              <ul class="dropdown-menu" aria-labelledby="addressDropdown">
-                <li><a class="dropdown-item" href="#">Address 1</a></li>
-                <li><a class="dropdown-item" href="#">Address 2</a></li>
-                <li><a class="dropdown-item" href="#">Address 3</a></li>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Downtown - 123 Main St</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Uptown - 456 Park Ave</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Add New Address</a></li>
               </ul>
             </li>
           </ul>
 
-          <div class="d-flex">
+          <div class="d-flex align-items-center">
             <a href="#" class="btn btn-outline-primary me-2">Login</a>
-            <a href="#" class="btn btn-primary">Sign Up</a>
-          </div>
+            <a href="#" class="btn btn-primary me-3">Sign Up</a>
 
-          <div class="ms-3">
-            <select class="form-select form-select-sm">
+            <select class="form-select" style="width: auto">
               <option value="en">English</option>
-              <option value="es">Khmer</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="de">Deutsch</option>
             </select>
           </div>
         </div>
       </div>
-    </header>
-    <div class="row mb-1">
-      <div class="col-sm-6 mb-3 mb-sm-0">
-        <div class="addhover card">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="input-group rounded search1">
+        <input
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+        />
+      </div>
+      <div class="coffee">
+        <a class="navbar-brand link" href="#hot">Hot Coffee</a>
+        <a class="navbar-brand link" href="#ice"> Ice & Frappe </a>
+        <a class="navbar-brand link" href="#tea">Tea Other </a>
+        <a class="navbar-brand link" href="#"> Smooties Other </a>
+      </div>
+    </nav>
+    <h1 id="hot" class="m-5 mb-0">Hot Coffee</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <main class="col-lg-9 p-4">
+          <div class="row g-4">
+            <!-- Espresso Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1 card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Espresso</h2>
+                      <p class="mb-1">from $3.25</p>
+                      <p class="text-muted small">
+                        Rich, full-bodied shot with a caramel-colored crema
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Espresso"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
               </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
+            </div>
+
+            <!-- Cappuccino Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Cappuccino</h2>
+                      <p class="mb-1">from $4.50</p>
+                      <p class="text-muted small">
+                        Equal parts espresso, steamed milk, and silky foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Cappuccino"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Caffè Latte</h2>
+                      <p class="mb-1">from $4.75</p>
+                      <p class="text-muted small">
+                        Espresso with steamed milk and light foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Caffè Latte</h2>
+                      <p class="mb-1">from $4.75</p>
+                      <p class="text-muted small">
+                        Espresso with steamed milk and light foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Caffè Latte</h2>
+                      <p class="mb-1">from $4.75</p>
+                      <p class="text-muted small">
+                        Espresso with steamed milk and light foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Caffè Latte</h2>
+                      <p class="mb-1">from $4.75</p>
+                      <p class="text-muted small">
+                        Espresso with steamed milk and light foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Caffè Latte</h2>
+                      <p class="mb-1">from $4.75</p>
+                      <p class="text-muted small">
+                        Espresso with steamed milk and light foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <h1 id="ice">ICE & OTHER</h1>
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Caffè Latte</h2>
+                      <p class="mb-1">from $4.75</p>
+                      <p class="text-muted small">
+                        Espresso with steamed milk and light foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Caffè Latte</h2>
+                      <p class="mb-1">from $4.75</p>
+                      <p class="text-muted small">
+                        Espresso with steamed milk and light foam
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Latte"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <h1 id="tea">TEA OTHER</h1>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Mocha Card -->
+            <div class="col-md-6">
+              <div class="card product-card card1">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col-8">
+                      <h2 class="fs-4">Mocha</h2>
+                      <p class="mb-1">from $5.00</p>
+                      <p class="text-muted small">
+                        Espresso with chocolate and steamed milk
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <img
+                        class="image rounded"
+                        src="./photo/24117.png"
+                        alt="Mocha"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <i class="bx bx-plus"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card addhover">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
-              </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
+        </main>
+
+        <aside class="col-lg-3 px-0">
+          <div class="right-panel">
+            <h3>Your Order</h3>
+            <div class="mb-4">
+              <p class="text-muted">Select items to add them to your cart</p>
+              <div id="cart-items">
+                <!-- Cart items will appear here -->
               </div>
             </div>
+            <img class="img-right" src="./photo/illu_cart_empty.svg" alt="" />
           </div>
-        </div>
+        </aside>
       </div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-sm-6 mb-3 mb-sm-0">
-        <div class="card addhover">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
-              </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
-              </div>
+      <footer class="text-black py-4">
+        <div class="container text-center">
+          <h4 class="mb-3">Popular Vendors</h4>
+          <div class="row">
+            <div class="col-12 col-md-10 mx-auto">
+              <ul class="list-inline">
+                <li class="list-inline-item">The Pizza Company</li>
+                |
+                <li class="list-inline-item">KFC</li>
+                |
+                <li class="list-inline-item">Dairy Queen</li>
+                |
+                <li class="list-inline-item">Burger King (Master Menu)</li>
+                |
+                <li class="list-inline-item">Bayon Bakery</li>
+                |
+                <li class="list-inline-item">Starbucks</li>
+                |
+                <li class="list-inline-item">Big Apple Donuts & Coffee</li>
+                |
+                <li class="list-inline-item">KOI Thé</li>
+                |
+                <li class="list-inline-item">Lotteria (Master Menu)</li>
+                |
+                <li class="list-inline-item">Kamu Tea (Master Menu)</li>
+                |
+                <li class="list-inline-item">Bonchon (Master Menu)</li>
+                |
+                <li class="list-inline-item">Tous Les Jours (Master Menu)</li>
+                |
+                <li class="list-inline-item">Krispy Kreme</li>
+                |
+                <li class="list-inline-item">Auntie Anne's</li>
+                |
+                <li class="list-inline-item">ChiCha San Chen 吃茶三千</li>
+                |
+                <li class="list-inline-item">Yellow Cab Pizza</li>
+                |
+                <li class="list-inline-item">Coffee Today (Master Menu)</li>
+                |
+                <li class="list-inline-item">Little Sheep Hot Pot</li>
+                |
+                <li class="list-inline-item">An Cha (Master Menu)</li>
+                |
+                <li class="list-inline-item">Backyard Cafe (Phnom Penh)</li>
+                |
+                <li class="list-inline-item">ACB Fried Chicken & Dumplings</li>
+                |
+                <li class="list-inline-item">ហិរហិរគ្រឿងសមុទ្រ</li>
+                |
+                <li class="list-inline-item">ហាងបាយ ដេអិន</li>
+                |
+                <li class="list-inline-item">អាយកាហ្វេដូងក្រអូប</li>
+                |
+                <li class="list-inline-item">ហាង ជូនកាហ្វេដូងគុជ (FiyaWin)</li>
+                |
+                <li class="list-inline-item">Go Go Seoul</li>
+                |
+                <li class="list-inline-item">ម៉ាក់លីនម្ជូរក្រឡុក</li>
+                |
+                <li class="list-inline-item">The Alley</li>
+                |
+                <li class="list-inline-item">Num Pang Jruk</li>
+              </ul>
             </div>
           </div>
+          <p class="mt-3">
+            &copy; 2025 Your Website Name. All Rights Reserved.
+          </p>
         </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card addhover">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
-              </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-sm-6 mb-3 mb-sm-0">
-        <div class="card addhover">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
-              </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card addhover">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
-              </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-sm-6 mb-3 mb-sm-0">
-        <div class="card addhover">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
-              </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card addhover">
-          <div class="card-body">
-            <div class="row" style="margin: 10px; height: 100px">
-              <div class="col-8">
-                <h1 class="fs-4">Expresso</h1>
-                from $ 1.32 <br />A drink to keep you awake (For ref only)
-              </div>
-              <div class="col-4">
-                <img class="image rounded" src="./photo/24117.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </footer>
     </div>
 
-    <div class="col-md-3 right-panel">
-        <h3>Right Panel</h3>
-        <p>This is the right panel. You can add additional content or widgets here.</p>
-        <ul>
-          <li>Widget 1</li>
-          <li>Widget 2</li>
-          <li>Widget 3</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-</html> -->
+</html>
