@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <input type="text" id="a" placeholder="Enter first number" />
+    <input type="text" id="b" placeholder="Enter second number" />
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">×</button>
+    <p id="result"></p>
+
+    <script>
+      function add() {
+        let inputValue1 = Number(document.getElementById("a").value);
+        let inputValue2 = Number(document.getElementById("b").value);
+
+        let result = inputValue1 + inputValue2;
+
+        document.getElementById("result").innerText = "Result: " + result;
+      }
+      function sub() {
+        let inputValue1 = Number(document.getElementById("a").value);
+        let inputValue2 = Number(document.getElementById("b").value);
+
+        let result = inputValue1 - inputValue2;
+
+        document.getElementById("result").innerText = "Result: " + result;
+      }
+      function mul() {
+        let inputValue1 = Number(document.getElementById("a").value);
+        let inputValue2 = Number(document.getElementById("b").value);
+
+        let result = inputValue1 * inputValue2;
+
+        document.getElementById("result").innerText = "Result: " + result;
+      }
+    </script>
+  </body>
+</html>

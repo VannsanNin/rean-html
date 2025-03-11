@@ -10,4 +10,17 @@
 //   document.write(a + " hello world");
 //   document.write("<br/>");
 // }
-console.log("hello");
+let i;
+let test_while = 10;
+for (i = 0; i < 10; i++) {
+  console.log(i + " ", "Hello,world!");
+  document.write(i + " ", "Vannsan Nin<br/>");
+}
+document.write("<hr/>");
+
+while (test_while > 0) {
+  console.log("IT!");
+  document.write("Information Technology<br/>");
+  test_while--;
+}
+document.write("<hr/>");
